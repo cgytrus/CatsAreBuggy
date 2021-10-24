@@ -38,7 +38,6 @@
         <Compile Include="src\Fixes\BaseFix.cs" />
         <Compile Include="src\Fixes\ModdedChallengesFix.cs" />
         <Compile Include="src\Fixes\DamageOnLoadFix.cs" />
-        <Compile Include="src\Fixes\KeybindsFix.cs" />
         <Compile Include="src\Fixes\SpeedrunTimerFix.cs" />
         <Compile Include="src\Fixes\World4ChallengeFix.cs" />
     </ItemGroup>
