@@ -14,8 +14,11 @@ namespace CatsAreBuggy.Fixes {
         public override void Apply() => IL.ChallengeSystem.World4Challenge.Cleanup += il => {
             ILCursor cursor = new(il);
             cursor.GotoNext(code => code.MatchCall<World4Challenge>("Save"));
-            cursor.Index--;
-            cursor.Emit(OpCodes.Ret);
+            cursor.GotoNext(code => code.MatchRet()); // end of the method; after Save()
+            ILLabel jmpLabel = cursor.DefineLabel();
+            cursor.GotoPrev(MoveType.Before, code => code.MatchLdarg(0)); // before Save()
+            cursor.Emit<World4ChallengeFix>(OpCodes.Call, $"get_{nameof(enabled)}");
+            cursor.Emit(OpCodes.Brtrue_S, jmpLabel);
         };
     }
 }
