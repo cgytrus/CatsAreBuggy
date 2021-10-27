@@ -20,6 +20,7 @@ namespace CatsAreBuggy.Fixes {
             cursor.GotoNext(code => code.MatchRet()); // end of the method; after Save()
             ILLabel jmpLabel = cursor.DefineLabel();
             cursor.GotoPrev(MoveType.Before, code => code.MatchLdarg(0)); // before Save()
+            cursor.EmitReference(this);
             cursor.Emit<World4ChallengeFix>(OpCodes.Call, $"get_{nameof(enabled)}");
             cursor.Emit(OpCodes.Brtrue_S, jmpLabel);
         };
