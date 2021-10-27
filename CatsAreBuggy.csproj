@@ -35,7 +35,6 @@
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="src\CatsAreBuggyPlugin.cs" />
-        <Compile Include="src\Fixes\BaseFix.cs" />
         <Compile Include="src\Fixes\ModdedChallengesFix.cs" />
         <Compile Include="src\Fixes\CollisionOnLoadFix.cs" />
         <Compile Include="src\Fixes\SpeedrunTimerFix.cs" />

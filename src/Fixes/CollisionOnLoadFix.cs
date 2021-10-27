@@ -1,5 +1,7 @@
 ﻿using System;
 
+using CalApi.Patches;
+
 using Cat;
 
 using HarmonyLib;
@@ -8,8 +10,9 @@ using UnityEngine;
 
 namespace CatsAreBuggy.Fixes {
     // ReSharper disable once UnusedType.Global
-    internal class CollisionOnLoadFix : BaseFix {
-        public CollisionOnLoadFix() : base("Fix issues when (re)loading a room.") { }
+    internal class CollisionOnLoadFix : ConfigurablePatch {
+        public CollisionOnLoadFix() : base(CatsAreBuggyPlugin.instance.Config, "Fixes", null, true,
+            "Fix issues when (re)loading a room.") { }
 
         private static readonly Action<CatPartManager, bool> setPartFreeze =
             (Action<CatPartManager, bool>)Delegate.CreateDelegate(

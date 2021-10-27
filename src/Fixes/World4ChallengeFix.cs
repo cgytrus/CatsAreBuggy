@@ -1,4 +1,6 @@
-﻿using ChallengeSystem;
+﻿using CalApi.Patches;
+
+using ChallengeSystem;
 
 using Mono.Cecil.Cil;
 
@@ -6,8 +8,9 @@ using MonoMod.Cil;
 
 namespace CatsAreBuggy.Fixes {
     // ReSharper disable once UnusedType.Global
-    internal class World4ChallengeFix : BaseFix {
-        public World4ChallengeFix() : base("Fix the world 4 challenge always getting marked as completed.") { }
+    internal class World4ChallengeFix : ConfigurablePatch {
+        public World4ChallengeFix() : base(CatsAreBuggyPlugin.instance.Config, "Fixes", null, true,
+            "Fix the world 4 challenge always getting marked as completed.") { }
 
         // remove the Save call in Cleanup as, unlike other challenges,
         // it's also used to mark the challenge as completed

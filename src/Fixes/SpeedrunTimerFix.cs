@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 
+using CalApi.Patches;
+
 using HarmonyLib;
 
 using UnityEngine.UI;
 
 namespace CatsAreBuggy.Fixes {
     // ReSharper disable once UnusedType.Global
-    internal class SpeedrunTimerFix : BaseFix {
-        public SpeedrunTimerFix() : base(
+    internal class SpeedrunTimerFix : ConfigurablePatch {
+        public SpeedrunTimerFix() : base(CatsAreBuggyPlugin.instance.Config, "Fixes", null, true,
             "Fix the speedrun timer not displaying the correct time on the first room of the run.") { }
 
         public override void Apply() {
