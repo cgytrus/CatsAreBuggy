@@ -9,5 +9,5 @@ A mod that fixes some bugs in [Cats are Liquid - A Better Place](https://store.s
 ## Contributing
 1. Clone the repository
 2. Put the missing DLLs into CatsAreBuggy/libs (for a more detailed explanation,
-   follow the [Plugin development](https://bepinex.github.io/bepinex_docs/master/articles/dev_guide/plugin_tutorial/1_setup.html)
+   follow the [Plugin development](https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/1_setup.html)
    guide on the BepInEx wiki starting from Gathering DLL dependencies)
