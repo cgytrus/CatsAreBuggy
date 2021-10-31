@@ -37,8 +37,6 @@
         <Compile Include="src\CatsAreBuggyPlugin.cs" />
         <Compile Include="src\Fixes\ModdedChallengesFix.cs" />
         <Compile Include="src\Fixes\CollisionOnLoadFix.cs" />
-        <Compile Include="src\Fixes\SpeedrunTimerFix.cs" />
-        <Compile Include="src\Fixes\World4ChallengeFix.cs" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="libs\0Harmony.dll" />
