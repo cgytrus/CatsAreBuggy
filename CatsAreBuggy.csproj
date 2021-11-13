@@ -14,7 +14,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="libs\Assembly-CSharp.dll" />
-    <Content Include="libs\CaLAPI.dll" />
+    <Content Include="libs\CalApi.dll" />
     <Content Include="libs\MMHOOK_Assembly-CSharp.dll" />
     <Content Include="libs\Rewired_Core.dll" />
     <Content Include="libs\UnityEngine.UI.dll" />
@@ -24,8 +24,8 @@
       <HintPath>libs\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="CalApi, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>libs\CaLAPI.dll</HintPath>
+    <Reference Include="CalApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>libs\CalApi.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MMHOOK_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
